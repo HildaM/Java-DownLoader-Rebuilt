@@ -1,4 +1,5 @@
-import URLUtils.URLPreProcess;
+import DownloadUtils.DownloadSupport;
+import NetworkUtils.URLPreProcess;
 
 import java.util.Scanner;
 
@@ -67,6 +68,17 @@ public class DownLoadMain {
      * @returnValue
      **/
     private void downLoad(String url) {
+        if (url == null) {
+            System.out.println("输入的url为空，出现错误！！！");
+            return;
+        }
 
+        DownloadSupport d = new DownloadSupport();
+
+        // 下载前检测
+        d.downloadCheck(url);
+
+        // 正式下载
+        d.downloadFile(url);
     }
 }

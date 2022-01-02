@@ -1,4 +1,4 @@
-package URLUtils;
+package NetworkUtils;
 
 /**
  * @ClassName: URLPreProcess
